@@ -3,43 +3,44 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Pawo</title>
+    <title>Lezir - Responsive Bootstrap 5.3 Landing Page Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Premium Bootstrap 4 Landing Page Template" />
     <meta name="keywords" content="bootstrap 4, premium, marketing, multipurpose" />
     <meta content="Themesbrand" name="author" />
     <!-- favicon -->
     <link rel="shortcut icon" href="images/favicon.ico">
+
     <!-- css -->
-    <link href="{{asset('src/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
-    <link href="{{asset('src/css/materialdesignicons.min.css')}}" rel="stylesheet" type="text/css" />
-    <link href="{{asset('src/css/style.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.min.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body>
 
     <!-- light-dark mode -->
 
-    {{-- <a href="javascript: void(0);" id="light-dark-mode" class="mode-btn text-white rounded-end">
+    <a href="javascript: void(0);" id="light-dark-mode" class="mode-btn text-white rounded-end">
         <i class="mdi mdi-sun-compass bx-spin mode-light"></i>
         <i class="mdi mdi-moon-waning-crescent mode-dark"></i>
-    </a> --}}
+    </a>
 
     <!-- Loader -->
-    {{-- <div id="preloader">
+    <div id="preloader">
         <div id="status">
             <div class="spinner"></div>
         </div>
-    </div> --}}
+    </div>
 
     <!--Navbar Start-->
-
     <nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-dark" id="navbar">
         <div class="container">
             <!-- LOGO -->
-            <a class="navbar-brand logo" href="{{ url('/') }}">
-                <img src="{{asset('src/images/logo-dark.png')}}" alt="" class="logo-dark" height="24" />
-                <img src="{{asset('src/images/logo-light.png')}}" alt="" class="logo-light" height="24" />
+            <a class="navbar-brand logo" href="layout-one-1.html">
+                <img src="images/logo-dark.png" alt="" class="logo-dark" height="24" />
+                <img src="images/logo-light.png" alt="" class="logo-light" height="24" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,10 +66,12 @@
                 </ul>
                 <ul class="navbar-nav navbar-center">
                     <li class="nav-item">
-                        <a href="{{ url('login') }}" class="nav-link">Login</a>
+                        <a href="#login" class="nav-link" data-bs-toggle="modal"
+                            data-bs-target="#exampleModalCenter">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a href={{ url('register') }}" class="nav-link">Register</a>
+                        <a href="#login" class="nav-link" data-bs-toggle="modal"
+                            data-bs-target="#exampleModalCenter-1">Register</a>
                     </li>
                 </ul>
             </div>
@@ -77,28 +80,40 @@
     <!-- Navbar End -->
 
     <!-- Hero Start -->
-    <section class="hero-1-bg" style="background-image: url(src/images/hero-1-bg-img.png)" id="home">
+    <section class="hero-4-bg position-relative" style="background-image: url(images/hero-4-bg.jpg)" id="home">
+        <div class="bg-layout-overlay"></div>
         <div class="container">
             <div class="row align-items-center justify-content-center">
-                <div class="col-lg-6">
-                    <h1 class="hero-1-title fw-bold text-shadow mb-4">Creative Landing Page</h1>
-                    <div class="w-75 mb-5 mb-lg-0">
-                        <p class="text-muted mb-5 pb-5 font-size-17">A creative & modern landing page with Lezir
-                            template & We love make things amazing.</p>
-                        <p><span class="font-size-20 me-2">🥳️</span>Nemo enim ipsam voluptatem quia
-                            voluptas
-                            sit aspernatur that is fugit.</p>
-                        <div class="subscribe-form">
-                            <form action="#">
-                                <input type="text" placeholder="Enter email...">
-                                <button type="submit" class="btn btn-primary">Subscribe</button>
-                            </form>
-                        </div>
-                    </div>
+                <div class="col-xl-6 col-lg-7">
+                    <h2 class="hero-4-title mb-4 text-shadow line-height-1_4">Get Your Professional Website Done With
+                        <span class="text-bottom-border">Lezir</span>
+                    </h2>
+                    <p class="text-muted">Donec pede justo fringilla vel aliquet nec vulputate eget arcu in enim
+                        bibendum must explain you how sitye all this mistaken.</p>
+                    <button class="btn btn-primary mt-4">Get Started</button>
                 </div>
-                <div class="col-lg-6 col-md-10">
-                    <div class=" mt-5 mt-lg-0">
-                        <img src="{{asset('src/images/hero-1-img.png')}}" alt="" class="img-fluid d-block mx-auto">
+                <div class="col-xl-4 offset-xl-2 col-lg-5 col-md-8">
+                    <div class="hero-4-registration-form mx-auto rounded mt-5 mt-lg-0">
+                        <h5 class="form-title mb-4 text-center">Get 30 days FREE Trial</h5>
+                        <div class="form-border w-25 mx-auto mb-4"></div>
+                        <form class="registration-form">
+                            <div class="form-group mb-4">
+                                <label for="exampleFormControlInput1" class="text-muted font-size-15">Your Name*</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="exampleFormControlInput1" class="text-muted font-size-15">Your
+                                    email*</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="">
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="exampleFormControlInput1" class="text-muted font-size-15">Password*</label>
+                                <input type="password" class="form-control" id="exampleFormControlInput3"
+                                    placeholder="">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block btn-sm text-uppercase">Get
+                                Started</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -167,7 +182,7 @@
     <!-- Why Choose Us End -->
 
     <!-- Features Start -->
-    <section class="section bg-light feather-bg-img" style="background-image: url('src/images/features-bg-img.png');"
+    <section class="section bg-light feather-bg-img " style="background-image: url(images/features-bg-img.png);"
         id="features">
         <div class="container">
             <div class="row justify-content-center">
@@ -180,14 +195,14 @@
                 </div>
             </div>
 
-            <div class="row justify-content-center">
-                <div class="col-lg-6 align-self-center">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
                     <div class="mb-4 mb-lg-0">
-                        <img src="{{asset('src/images/features-img.png')}}" alt="" class="img-fluid d-block mx-auto">
+                        <img src="images/features-img.png" alt="" class="img-fluid d-block mx-auto">
                     </div>
                 </div>
 
-                <div class="col-lg-5 offset-lg-1 align-self-center">
+                <div class="col-lg-5 offset-lg-1">
                     <p class="font-weight-medium text-uppercase mb-2"><i
                             class="mdi mdi-chart-bubble h2 text-primary me-1 align-middle"></i> Creative Features</p>
                     <h3 class="font-weight-semibold line-height-1_4 mb-4">Build <b>community</b> & <b>conversion</b>
@@ -208,7 +223,7 @@
         </div>
     </section>
 
-    <section class="section feather-bg-img" style="background-image: url(src/images/features-bg-img-1.png)">
+    <section class="section feather-bg-img " style="background-image: url(images/features-bg-img-1.png)">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-5 align-self-center">
@@ -321,7 +336,7 @@
     <!-- Pricing End -->
 
     <!-- Blog start -->
-    <section class="section blog" id="blog">
+    <section class="section" id="blog">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
@@ -475,7 +490,7 @@
                                         data-feather="twitter"></i></a></li>
                             <li class="list-inline-item me-4"><a href="#" class="footer-social-icon"><i class=""
                                         data-feather="instagram"></i></a></li>
-                            <li class="list-inline-item "><a href="#" class="footer-social-icon"><i class=""
+                            <li class="list-inline-item"><a href="#" class="footer-social-icon"><i class=""
                                         data-feather="linkedin"></i></a></li>
                         </ul>
                     </div>
@@ -483,7 +498,7 @@
                 <div class="col-lg-7 offset-lg-1">
                     <div class="row">
                         <div class="col-md-4">
-                            <h6 class="text-white text-uppercase mb-3">About Us</h6>
+                            <h6 class="text-white text-uppercase mb-4">About Us</h6>
                             <ul class="list-unstyled footer-sub-menu">
                                 <li><a href="#" class="footer-link">Works</a></li>
                                 <li><a href="#" class="footer-link">Strategy</a></li>
@@ -647,15 +662,15 @@
 
 
     <!-- javascript -->
-    <script src="{{asset('src/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{asset('src/js/smooth-scroll.polyfills.min.js')}}"></script>
-    <script src="{{asset('src/js/gumshoe.polyfills.min.js')}}"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/smooth-scroll.polyfills.min.js"></script>
+    <script src="js/gumshoe.polyfills.min.js"></script>
     <!-- feather icon -->
-    <script src="{{asset('src/js/feather.js')}}"></script>
+    <script src="js/feather.js"></script>
     <!-- unicons icon -->
-    <script src="{{asset('src/js/unicons.js')}}"></script>
+    <script src="js/unicons.js"></script>
     <!-- Main Js -->
-    <script src="{{asset('src/js/app.js')}}"></script>
+    <script src="js/app.js"></script>
 
 </body>
 
